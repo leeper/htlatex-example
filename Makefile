@@ -1,4 +1,4 @@
-all: manuscript-htlatex.docx manuscript-pandoc.docx
+all: manuscript-htlatex.docx manuscript-pandoc.docx manuscript-pandoc-csl.docx
 
 manuscript-htlatex.docx: manuscript.html
 	pandoc manuscript.html -o manuscript-htlatex.docx
@@ -14,6 +14,9 @@ figures/figure.png: analysis/analysis.R
 
 manuscript-pandoc.docx: manuscript.html
 	pandoc manuscript.tex -o manuscript-pandoc.docx
+
+manuscript-pandoc-csl.docx: manuscript.html
+	pandoc manuscript.tex -o manuscript-pandoc-csl.docx --filter pandoc-citeproc --csl american-political-science-association.csl
 
 manuscript.pdf: manuscript.tex references.bib figures/figure.png
 	pdflatex manuscript

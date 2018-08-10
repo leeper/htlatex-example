@@ -1,0 +1,51 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\title{Example of htlatex}
+\author{Thomas J. Leeper}
+
+\begin{document}
+
+\maketitle
+
+This is a manuscript. Section \ref{sec:table} has a table. Section \ref{sec:figure} has a figure. Section \ref{sec:eq} has an equation. For demonstration purposes, here's a reference \citep{Grovesetal2006}.
+
+\subsection{A Table}\label{sec:table}
+
+This section has a table. It's Table \ref{tab:table1}.
+
+\begin{table}
+\caption{An example table}\label{tab:table1}
+\begin{tabular}{ll}
+Header 1 & Header 2\\
+Row 1 & Value 1 \\
+Row 2 & Value 2 \\
+\end{tabular}
+\end{table}
+
+\subsection{A Figure}\label{sec:figure}
+
+This section has a figure. It's Figure \ref{fig:fig1}.
+
+\begin{figure}
+\caption{An example figure}\label{fig:fig1}
+\includegraphics[height=2in]{figures/figure.png}
+\end{figure}
+
+\subsection{An equation}\label{sec:eq}
+
+This section has an in-line equation: $x^2 = 2^2 = 4$ and an quation environment:
+
+\begin{equation}
+a^2 = b^2 + c^2
+\end{equation}
+
+That's it.
+
+\bibliographystyle{apsa-leeper}
+\bibliography{references}
+
+\end{document}

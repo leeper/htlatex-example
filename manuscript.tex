@@ -11,13 +11,13 @@
 
 \maketitle
 
-This is a manuscript. Section \ref{sec:table} has a table. Section \ref{sec:figure} has a figure. Section \ref{sec:eq} has an equation. For demonstration purposes, here's a reference \citep{Grovesetal2006}.
+\noindent This is a manuscript. Section \ref{sec:table} has a table. Section \ref{sec:figure} has a figure. Section \ref{sec:eq} has an equation. For demonstration purposes, here's a reference \citep{Grovesetal2006}.\footnote{This is a footnote.}
 
 \subsection{A Table}\label{sec:table}
 
 This section has a table. It's Table \ref{tab:table1}.
 
-\begin{table}
+\begin{table}[ht]
 \caption{An example table}\label{tab:table1}
 \begin{tabular}{ll}
 Header 1 & Header 2\\
@@ -30,20 +30,20 @@ Row 2 & Value 2 \\
 
 This section has a figure. It's Figure \ref{fig:fig1}.
 
-\begin{figure}
+\begin{figure}[ht]
 \caption{An example figure}\label{fig:fig1}
-\includegraphics[height=2in]{figures/figure.png}
+\includegraphics[height=2in]{figure.png}
 \end{figure}
 
 \subsection{An equation}\label{sec:eq}
 
-This section has an in-line equation: $x^2 = 2^2 = 4$ and an quation environment:
+This section has an in-line equation: $x^2 = 2^2 = 4$ and an equation environment:
 
 \begin{equation}
 a^2 = b^2 + c^2
 \end{equation}
 
-That's it.
+\noindent That's it.
 
 \bibliographystyle{apsa-leeper}
 \bibliography{references}

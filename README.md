@@ -13,12 +13,14 @@ I like `htlatex`. I works well, preserves cross-references, section numbers, cit
 The build workflow - using `make` is two steps:
 
 ```bash
-htlatex manuscript
+htlatex manuscript "html,fn-in"
 bibtex manuscript
-htlatex manuscript
-htlatex manuscript
+htlatex manuscript "html,fn-in"
+htlatex manuscript "html,fn-in"
 pandoc manuscript.html -o manuscript-htlatex.docx
 ```
+
+Note the second argument to `htlatex`, which delivers footnotes. For whatever reason they're not included in the HTML by default.
 
 This workflow, in my experience, is the best one available. Basically, you're buiding an HTML file and using `pandoc` to convert the well-formatted HTML into a word document.
 
